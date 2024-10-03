@@ -1,12 +1,12 @@
 import { useState } from "react";
-import Input from "../../components/input";
 import logo from "../../images/logo.png";
-import play from "../../images/play.png";
-import sacolas from "../../images/sacolas.png";
 import participante from "../../images/participante.png";
+import Sort from "./components/sort";
+import Start from "./components/start";
 import { HomeScreenContainer } from "./style";
 
 const HomeScreen = () => {
+  const [foward, setForward] = useState<boolean>(false);
   const [names, setNames] = useState<string[]>([
     "João",
     "Maria",
@@ -20,24 +20,7 @@ const HomeScreen = () => {
         <img src={logo} alt="logo" />
         <img src={participante} alt="participante" />
       </div>
-      <div className="bottomComponent">
-        <h1>Vamos começar!</h1>
-        <Input />
-        {names && (
-          <li>
-            {names.map((name) => {
-              return <ul>{name}</ul>;
-            })}
-          </li>
-        )}
-        <div className="playContainer">
-          <div className="playButton">
-            <img src={play} alt="play" />
-            <button>Iniciar brincadeira!</button>
-          </div>
-          <img src={sacolas} alt="sacolas" />
-        </div>
-      </div>
+      {foward ? <Sort names={names} /> : <Start names={names} setForward={setForward}/>}
     </HomeScreenContainer>
   );
 };
