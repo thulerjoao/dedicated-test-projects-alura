@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const InputContainer = styled.div`
+export const InputContainer = styled.form`
   height: 82px;
   width: 100%;
   max-width: 726px;
