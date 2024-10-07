@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { RecoilRoot } from "recoil";
+import HomeScreen from "./pages/home";
 import Formulario from "./components/form/form";
 
 function App() {

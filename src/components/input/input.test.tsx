@@ -2,7 +2,7 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import Input from ".";
 import { RecoilRoot } from "recoil";
 
-test("testing global input element", () => {
+test("integration test between elements", () => {
   render(
     <RecoilRoot>
       <Input />
