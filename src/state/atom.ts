@@ -1,11 +1,16 @@
 import { atom } from "recoil";
 
 export const usersListState = atom<string[]>({
-    key: "usersListState",
-    default: []
-})
+  key: "usersListState",
+  default: [],
+});
 
 export const erroState = atom<string>({
-    key: "erroState",
-    default: ""
-})
+  key: "erroState",
+  default: "",
+});
+
+export const sortResult = atom<Map<string, string>>({
+  key: "sortResult",
+  default: new Map(),
+});
