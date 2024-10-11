@@ -56,6 +56,9 @@ describe("pagina de sorteio", () => {
       }
     })
     const button = screen.getByRole("button")
+
+    expect(button).toBeInTheDocument()
+
     fireEvent.click(button)
 
     const secretFriend = screen.getByRole("alert")
@@ -63,5 +66,6 @@ describe("pagina de sorteio", () => {
     expect(secretFriend).toBeInTheDocument()
 
     expect(secretFriend).toBeInTheDocument()
+    
   })
 });

@@ -8,7 +8,9 @@ const Sorteio = () => {
   const [secretFriend, setSecretFriend] = useState<string>("");
   const result = useSortResult();
 
+
   const sort = (event: React.FormEvent<HTMLFormElement>) => {
+    setCurrentUser("dasdsa")
     event.preventDefault();
     const secretResult = result.get(currentUser);
     secretResult && setSecretFriend(secretResult);
@@ -28,8 +30,8 @@ const Sorteio = () => {
             return <option key={item}>{item}</option>;
           })}
         </select>
-      </form>
       <button>Sortear</button>
+      </form>
       {secretFriend && <p role="alert">{secretFriend}</p>}
     </section>
   );
