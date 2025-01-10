@@ -20,7 +20,7 @@ const HomeScreen = () => {
         <img src={logo} alt="logo" />
         <img src={participante} alt="participante" />
       </div>
-      {foward ? <Sort names={names} /> : <Start names={names} setForward={setForward}/>}
+      {foward ? <Sort names={names} /> : <Start  setForward={setForward}/>}
     </HomeScreenContainer>
   );
 };

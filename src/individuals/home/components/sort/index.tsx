@@ -1,5 +1,5 @@
 import aviao from "../../../../images/aviao.png";
-import Select from "../../../../components/select";
+import Select from "../../../select";
 import dado from "../../../../images/dado.png";
 import { SortContainer } from "./style";
 

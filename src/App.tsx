@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { RecoilRoot } from "recoil";
-import HomeScreen from "./pages/home";
+import HomeScreen from "./individuals/home";
 import Formulario from "./components/form/form";
 import Sorteio from "./pages/sorteio/sorteio";
 
@@ -9,7 +9,7 @@ function App() {
     <BrowserRouter>
       <RecoilRoot>
         <Routes>
-          <Route path="/" element={<Sorteio />} />
+          <Route path="/" element={<HomeScreen />} />
         </Routes>
       </RecoilRoot>
     </BrowserRouter>
